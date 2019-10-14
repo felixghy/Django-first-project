@@ -139,3 +139,4 @@ MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
 # LOGIN_URL = 'basic_app/login_NS'
+ALLOWED_HOSTS = ['felixghy.pythonanywhere.com']
