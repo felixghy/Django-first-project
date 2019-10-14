@@ -28,7 +28,7 @@ SECRET_KEY = 'n4y&y#5%=q+i6oab69ee$)%vshab!vybi=47c(h%pzr$t&mndo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['felixghy.pythonanywhere.com']
 
 
 # Application definition
@@ -139,4 +139,3 @@ MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
 # LOGIN_URL = 'basic_app/login_NS'
-ALLOWED_HOSTS = ['felixghy.pythonanywhere.com']
