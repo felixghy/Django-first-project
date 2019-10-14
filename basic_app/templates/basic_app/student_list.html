@@ -1,0 +1,17 @@
+{% extends "basic_app/basic_app_base.html" %}
+
+{% block body_block%}
+<h1>welcome to a list of all students</h1>
+
+<ol>
+  {% for stdt in students%}
+  <!-- <h2><li><a href="{url 'basic_app:student_detail_URL' pk=student_detail.pk }">{{stdt.name}}</a></li></h2> -->
+  <h2><li><a href="{% url 'basic_app:student_detail_URL' pk=stdt.id %}">{{stdt.name}},stuent ID: {{stdt.id}}</a></li></h2>
+
+  {% endfor%}
+</ol>
+<div class="container">
+  <h2><a href="{% url 'basic_app:createStudent' %}" </a>Create Student</h2>
+</div>
+
+{% endblock%}

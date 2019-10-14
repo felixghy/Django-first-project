@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  </head>
+  <body>
+
+    <nav class="nav bar navbar -default navbar-static-top">
+      <ul class="nav navbar-nav">
+        <li><a class="navbar-brand" href="{% url 'basic_app:list'%}">Schools</a></li>
+          <li><a class="navbar-link" href="{% url 'admin:index'%}"> Admin</a></li>
+          <li><a class="navbar-link" href="{% url 'basic_app:register' %}"> Register</a></li>
+          <li><a class="navbar-link" href="{% url 'basic_app:createStudent' %}"> Add New Student</a></li>
+          {% if user.authenticated %}
+          <li><a class="navbar-link" href="{% url 'basic_app:logout' %}"> Hi, Logout </a></li>
+          {% else%}
+          <li><a class="navbar-link" href="{% url 'basic_app:login_NS' %}"> Login </a></li>
+          {% endif %}
+
+      </ul>
+
+    </nav>
+  <div class="container">
+    {% block body_block %}
+    <title>this is the base file2</title>
+    {% endblock %}
+  </div>
+
+
+  </body>
+</html>
